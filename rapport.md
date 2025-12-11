@@ -2,7 +2,47 @@
 
 ##  **1. Introduction**
 
-La maladie cardiaque est l’une des premières causes de mortalité dans le monde. L’objectif de ce projet est de construire un modèle prédictif capable d’identifier si un patient présente un risque cardiaque à partir de données cliniques. Pour cela, nous utilisons le dataset **Heart Disease** disponible sur Kaggle.
+La maladie cardiaque est l’une des premières causes de mortalité dans le monde. L’objectif de ce projet est de construire un modèle prédictif capable d’identifier si un patient présente un risque cardiaque à partir de données cliniques. 
+
+Le jeu de données Heart Disease comprend 303 observations (patients) et 14 variables, dont 13 caractéristiques explicatives et une variable cible binaire indiquant la présence ou l'absence de maladie cardiaque. Chaque ligne représente un patient avec des informations cliniques standardisées couvrant trois grandes catégories :
+
+### Variables Cliniques et Démographiques
+Données démographiques : âge (en années) et sexe (codé 1 pour homme, 0 pour femme)
+
+Symptômes rapportés : type de douleur thoracique (4 catégories distinctes)
+
+Mesures physiologiques : pression artérielle au repos (mmHg), cholestérol sérique (mg/dL), glycémie à jeun (seuil à 120 mg/dL)
+
+### Examens Cardio-spécifiques
+Électrocardiogramme au repos (3 résultats possibles : normal, anomalie ST-T, suspicion d'hypertrophie ventriculaire gauche)
+
+Test d'effort : fréquence cardiaque maximale atteinte, présence d'angine induite par l'exercice, dépression du segment ST post-effort
+
+Paramètres d'effort avancés : pente du segment ST (descendante, plate ou ascendante)
+
+Imagerie médicale : nombre de vaisseaux coronaires majeurs visualisés par fluoroscopie (0 à 3), résultat du test au thallium d'effort (3 interprétations possibles)
+
+### Variable Cible
+La colonne target est codée :
+
+0 : absence de maladie cardiaque (138 patients)
+
+1 : présence de maladie cardiaque (165 patients)
+
+### Valeur Analytique
+Ce dataset présente plusieurs atouts pour la modélisation prédictive :
+
+Variables hétérogènes : mélange de données continues (âge, cholestérol), ordinales (nombre de vaisseaux) et catégorielles (type de douleur)
+
+Indicateurs cliniques validés : tous les paramètres sont couramment utilisés en cardiologie pour l'évaluation du risque
+
+Déséquilibre modéré : 54% de cas positifs contre 46% de négatifs, nécessitant une attention particulière mais pas de techniques de rééquilibrage agressives
+
+Pertinence métier : chaque variable a une interprétation médicale directe, facilitant l'explicabilité des prédictions du modèle
+
+Cet ensemble constitue une base solide et réaliste pour développer un modèle d'aide au diagnostic cardiaque, reflétant la complexité des données rencontrées en pratique clinique tout en restant accessible pour l'analyse statistique et le machine learning.
+
+
 
 Ce rapport détaille le cycle complet :
 
@@ -120,7 +160,7 @@ model.fit(X_train, y_train)
 ---
 ##  **7. Évaluation du Modèle**
 ###  **Accuracy**
-Le modèle atteint une précision d'environ **85–90%** selon les splits.
+Le modèle atteint une précision très élevée (>95%), cohérente avec la matrice de confusion et l’AUC.
 
 ###  **Rapport de classification**
 Il affiche :
