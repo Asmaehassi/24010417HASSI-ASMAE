@@ -11,7 +11,7 @@
 
 ---
 
-#  Rapport de Projet
+#  Rapport de projet
 
 **Titre du projet :** Détection du  risque de maladie cardiaque
 
