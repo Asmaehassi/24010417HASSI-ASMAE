@@ -7,8 +7,17 @@ Il comprend la préparation des données, l’analyse exploratoire (EDA), la mod
 ---
 
 ##  Contenu du dépôt
-- `rapport.md` – Rapport complet  
-- `code.ipynb` – Code Python  
+| Fichier           | Description                                                                                                |
+| ----------------- | ---------------------------------------------------------------------------------------------------------- |
+| `CODE.ipynb`      | Notebook principal contenant le code Python pour l’analyse et l’entraînement des modèles Machine Learning. |
+| `heart.csv`       | Jeu de données utilisé pour entraîner et tester les modèles.                                               |
+| `rapport.md`      | Rapport complet du projet, incluant la méthodologie, les résultats et l’analyse.                           |
+| `README.md`       | Ce fichier, qui présente le projet et son contenu.                                                         |                                                                
+| `logo (2).png`    | Logo de l’établissement.                                                                                   |
+| `pg.png`          | Image pour la page de garde du rapport.                                                                    |
+| `lavideo (2).mp4` | Vidéo complémentaire du projet.                                                                         |
+                                                                         
+
 - Figures produites : ROC, matrice de confusion, matrice de corrélation, distribution de l’âge  
 
 ---
